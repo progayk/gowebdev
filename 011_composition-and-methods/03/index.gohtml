@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>composition</title>
+    </head>
+    <body>
+    <h1>{{.Fall.Term}}</h1>
+    {{- range .Fall.Courses}}
+    <p>{{.Number}} {{.Name}} has {{.Units}}</p>
+    {{- end}}
+    <h1>{{.Spring.Term}}</h1>
+    {{- range .Spring.Courses}}
+    <p>{{.Number}} {{.Name}} has {{.Units}}</p>
+    {{- end}}
+    <h1>{{.Summer.Term}}</h1>
+    {{- range .Summer.Courses}}
+    <p>{{.Number}} {{.Name}} has {{.Units}}</p>
+    {{- end}}
+
+
+    </body>
+</html>
+	

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>composition</title>
+    </head>
+    <body>
+    <p>Name: {{.Name}}</p>
+    <p>Age: {{.Age}}</p>
+    {{- if .LicenseToKill}}
+    <p>has License to kill </p>
+    {{- else}}
+    <p>has no License to kill </p>
+    {{- end}}
+
+    </body>
+</html>
+	

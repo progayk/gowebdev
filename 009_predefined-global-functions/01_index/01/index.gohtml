@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello World</title>
+    </head>
+    <body>
+
+    {{index . 1}}
+    {{index . 2}}
+    {{index . 3}}
+
+    <!--
+    index
+
+    Returns the result of indexing its first argument by the
+    following arguments. Thus "index x 1 2 3" is, in Go syntax,
+    x[1][2][3]. Each indexed item must be a map, slice, or array.
+    -->
+
+    <!-- FYI -->
+    This is a go template comment
+    {{/*(index .Wisdom 3).Name*/}}
+    </body>
+</html>
+	

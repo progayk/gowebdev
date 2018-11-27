@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Input type</title>
+    </head>
+    <body>
+    <header>
+        {{- if .Method}}
+        <h1>The request method is: {{.Method}}</h1>
+        {{- end}}
+
+        {{- if .URL}}
+            <h2>The request URL is: {{.URL}}</h2>
+        {{- end}}
+
+        {{- if .Host}}
+            <h2>The request Host is: {{.Host}}</h2>
+        {{- end}}
+
+        {{- if .ContentLength}}
+            <h2>The request ContentLength is: {{.ContentLength}}</h2>
+        {{- end}}
+
+        {{- if .Header}}
+            <ul>
+               {{- range $key, $value := .Header}}
+               <li><strong>{{$key}}</strong> - {{$value}}</li>
+               {{- end}}
+            </ul>
+        {{- end}}
+
+    </header>
+    <main>
+    {{- if .Submissions}}
+        <p><strong>Variables</strong>(identifiers) and <em>values:</em></p>
+        {{- range $key, $value := .Submissions}}
+        <p><strong>{{$key}}</strong></p>
+        <ul>
+            {{- range $value}}
+            <li>{{.}}</li>
+            {{- end}}
+        </ul>
+        {{- end}}
+    {{- end}}
+    </main>
+
+    <form action="/?fname=johnny" method="POST">
+        <input type="text" name="fname" placeholder="first name" autofocus>
+        <input type="submit" name="submit-btn" value="onda button">
+    </form>
+
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <h1>Sages</h1>
+        <ul>
+            {{- range .Wisdom}}
+            <li>{{.Name}} says "{{.Motto}}".</li>
+            {{- end}}
+        </ul>
+        <ul>
+        {{- range .Transport}}
+            <li>{{.Manufacturer}} {{.Model}} has {{.Doors}}.</li>
+        {{- end}}
+        </ul>
+    </body>
+</html>
+	

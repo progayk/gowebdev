@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello World</title>
+    </head>
+    <body>
+
+    Example #1
+    {{- range .}}
+        {{.}}
+    {{- end}}
+
+    Example #2
+    {{- if .}}
+        {{.}}
+    {{- end}}
+
+    Example #3
+    {{- range .}}
+        {{- if .Name}}
+            {{.Name}}
+        {{- end}}
+    {{- end}}
+
+    Example #4
+    {{- range .}}
+        {{- if and .Name .Admin}}
+            Name: {{.Name}} is Admin
+        {{- end}}
+    {{- end}}
+
+
+    <!--
+    and
+
+	Returns the boolean AND of its arguments by returning the
+	first empty argument or the last argument, that is,
+	"and x y" behaves as "if x then y else x". All the
+	arguments are evaluated.
+    -->
+
+    </body>
+</html>
+	

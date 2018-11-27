@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Input type</title>
+    </head>
+    <body>
+    {{- if .}}
+        <p><strong>Variables</strong>(identifiers) and <em>values:</em></p>
+        {{- range $key, $value := .}}
+        <p><strong>{{$key}}</strong></p>
+        <ul>
+            {{- range $value}}
+            <li>{{.}}</li>
+            {{- end}}
+        </ul>
+        {{- end}}
+    {{- end}}
+
+    <form action="/?fname=johnny" method="POST">
+        <input type="text" name="fname" placeholder="first name" autofocus>
+        <input type="submit" name="submit-btn" value="onda button">
+    </form>
+
+    </body>
+</html>
