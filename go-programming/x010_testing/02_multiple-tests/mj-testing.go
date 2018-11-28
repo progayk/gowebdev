@@ -1,5 +1,7 @@
+// Package mjmath provides custom math solutions.
 package mjmath
 
+// Avarage calculates avarage of given numbers.
 func Avarage(f []float64) float64 {
 	if len(f) == 0 {
 		return 0
