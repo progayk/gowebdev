@@ -1,6 +1,9 @@
 package mjmath
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestAvarage(t *testing.T) {
 	var v float64
@@ -9,4 +12,10 @@ func TestAvarage(t *testing.T) {
 		t.Errorf("Expected 1.5 got %v", v)
 	}
 
+}
+
+func ExampleAvarage() {
+	fmt.Println(Avarage([]float64{1, 2}))
+	// Output:
+	// 1.5
 }

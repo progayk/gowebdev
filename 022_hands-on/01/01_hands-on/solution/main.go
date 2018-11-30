@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"html/template"
-	"log"
 	"net/http"
 )
 
@@ -18,6 +17,12 @@ type data struct{
 	Name string
 }
 
+func HandleError(err error) {
+	if err != nil {
+		fmt.Println(err)
+	}
+}
+
 func main() {
 
 	mux := http.NewServeMux()
@@ -29,9 +34,7 @@ func main() {
 
 		}
 		err := tpl.ExecuteTemplate(w, "index.gohtml", d)
-		if err != nil {
-			log.Println(err)
-		}
+		HandleError(err)
 	})
 
 	mux.HandleFunc("/dog", func(w http.ResponseWriter, r *http.Request) {
@@ -41,16 +44,12 @@ func main() {
 
 		}
 		err := tpl.ExecuteTemplate(w, "index.gohtml", d)
-		if err != nil {
-			log.Println(err)
-		}
+		HandleError(err)
 	})
 
 	mux.HandleFunc("/me", func(w http.ResponseWriter, r *http.Request) {
 		err := r.ParseForm()
-		if err != nil {
-			log.Println(err)
-		}
+		HandleError(err)
 
 		d := data{
 			Page: "me",
@@ -59,16 +58,10 @@ func main() {
 		}
 
 		err = tpl.ExecuteTemplate(w, "index.gohtml", d)
-		if err != nil {
-			log.Println(err)
-		}
+		HandleError(err)
 	})
 
 
 	err := http.ListenAndServe(":8080", mux)
-	if err != nil {
-		fmt.Println(err)
-	}
-
-
+	HandleError(err)
 }
