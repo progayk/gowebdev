@@ -9,7 +9,7 @@ import (
 var tpl *template.Template
 
 func init() {
-	tpl = template.Must(template.ParseFiles("index.gohtml"))
+	tpl = template.Must(template.ParseFiles("index.html"))
 }
 
 func main() {
@@ -21,7 +21,7 @@ func main() {
 			"Prohpet": "Muhammad",
 	}
 
-	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", sages)
+	err := tpl.ExecuteTemplate(os.Stdout, "index.html", sages)
 	if err != nil {
 		log.Fatalln(err)
 	}

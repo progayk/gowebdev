@@ -1,0 +1,1 @@
+In html don't use `text/plain` attribute of form element in production.

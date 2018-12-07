@@ -16,7 +16,7 @@ func main() {
 
 	data := 42
 
-	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", data)
+	err := tpl.ExecuteTemplate(os.Stdout, "index.html", data)
 	if err != nil {
 		log.Fatalln(err)
 	}

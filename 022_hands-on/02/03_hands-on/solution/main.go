@@ -42,15 +42,3 @@ func handleConn(conn net.Conn) {
 	io.WriteString(conn, "i see you connected.")
 }
 
-//func myLog(msg string) {
-//	f, err := os.OpenFile("log.txt", os.O_RDWR, 0755)
-//	if err != nil {
-//		log.Println("couldnt open file: ", err)
-//	}
-//	defer f.Close()
-//
-//	_, err = io.WriteString(f, msg)
-//	if err != nil {
-//		log.Fatalln("couldnt copy to file: ", err)
-//	}
-//}

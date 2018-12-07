@@ -9,7 +9,7 @@ import (
 var tpl *template.Template
 
 func init() {
-	tpl = template.Must(template.ParseFiles("index.gohtml"))
+	tpl = template.Must(template.ParseFiles("index.html"))
 }
 
 type hotdog int
@@ -20,7 +20,7 @@ func (h hotdog) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		log.Fatalln(err)
 	}
 
-	tpl.ExecuteTemplate(w, "index.gohtml", r.Form)
+	tpl.ExecuteTemplate(w, "index.html", r.Form)
 }
 
 func main() {

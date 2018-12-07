@@ -13,7 +13,7 @@ type Page struct {
 }
 
 func init() {
-	tpl = template.Must(template.ParseGlob("index.gohtml"))
+	tpl = template.Must(template.ParseGlob("index.html"))
 }
 
 func main() {
@@ -25,7 +25,7 @@ func main() {
 	}
 
 
-	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", p)
+	err := tpl.ExecuteTemplate(os.Stdout, "index.html", p)
 	if err != nil {
 		log.Fatalln(err)
 	}

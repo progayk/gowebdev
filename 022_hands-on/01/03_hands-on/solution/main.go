@@ -26,13 +26,13 @@ func HandleError(err error) {
 
 func index(w http.ResponseWriter, r *http.Request) {
 	d := data{"index", ""}
-	err := tpl.ExecuteTemplate(w, "index.gohtml", d)
+	err := tpl.ExecuteTemplate(w, "index.html", d)
 	HandleError(err)
 }
 
 func dog(w http.ResponseWriter, r *http.Request) {
 	d := data{"dog", ""}
-	err := tpl.ExecuteTemplate(w, "index.gohtml", d)
+	err := tpl.ExecuteTemplate(w, "index.html", d)
 	HandleError(err)
 }
 
@@ -50,7 +50,7 @@ func me(w http.ResponseWriter, r *http.Request) {
 
 	d := data{"me", name}
 
-	err = tpl.ExecuteTemplate(w, "index.gohtml", d)
+	err = tpl.ExecuteTemplate(w, "index.html", d)
 	HandleError(err)
 }
 

@@ -15,7 +15,7 @@ type user struct {
 }
 
 func init() {
-	tpl = template.Must(template.ParseFiles("index.gohtml"))
+	tpl = template.Must(template.ParseFiles("index.html"))
 }
 
 func main() {

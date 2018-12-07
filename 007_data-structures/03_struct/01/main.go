@@ -14,7 +14,7 @@ type sage struct {
 }
 
 func init() {
-	tpl = template.Must(template.ParseFiles("index.gohtml"))
+	tpl = template.Must(template.ParseFiles("index.html"))
 }
 
 func main() {
@@ -23,7 +23,7 @@ func main() {
 		Motto: "The belief of no beliefs",
 	}
 
-	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", buddha)
+	err := tpl.ExecuteTemplate(os.Stdout, "index.html", buddha)
 	if err != nil {
 		log.Fatalln(err)
 	}

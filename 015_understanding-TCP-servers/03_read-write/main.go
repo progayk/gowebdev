@@ -34,7 +34,7 @@ func handler(conn net.Conn) {
 		fmt.Fprint(conn,  t.Format("15:04"), " You\n\n")
 		ln := scanner.Text()
 		fmt.Fprintf(conn, "\t\t I heard you said %s <", ln)
-		fmt.Fprintln(conn, "\n\t\t", t.Format("15:04"), " Mayk\n")
+		fmt.Fprintln(conn, "\n\t\t", t.Format("15:04"), " Mayk")
 	}
 	defer conn.Close()
 

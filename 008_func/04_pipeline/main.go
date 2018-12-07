@@ -28,12 +28,12 @@ var fm = template.FuncMap{
 }
 
 func init() {
-	tpl = template.Must(template.New("").Funcs(fm).ParseFiles("index.gohtml"))
+	tpl = template.Must(template.New("").Funcs(fm).ParseFiles("index.html"))
 }
 
 func main() {
 
-	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", 3)
+	err := tpl.ExecuteTemplate(os.Stdout, "index.html", 3)
 	if err != nil {
 		log.Fatalln(err)
 	}

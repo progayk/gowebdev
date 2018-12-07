@@ -26,7 +26,7 @@ func (p person) DblAge() int {
 }
 
 func init() {
-	tpl = template.Must(template.ParseGlob("index.gohtml"))
+	tpl = template.Must(template.ParseGlob("index.html"))
 }
 
 func main() {
@@ -36,7 +36,7 @@ func main() {
 		Age: 28,
 	}
 
-	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", p1)
+	err := tpl.ExecuteTemplate(os.Stdout, "index.html", p1)
 	if err != nil {
 		log.Fatalln(err)
 	}

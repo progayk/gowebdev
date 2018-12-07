@@ -33,7 +33,7 @@ func main() {
 			Name: "",
 
 		}
-		err := tpl.ExecuteTemplate(w, "index.gohtml", d)
+		err := tpl.ExecuteTemplate(w, "index.html", d)
 		HandleError(err)
 	})
 
@@ -43,7 +43,7 @@ func main() {
 			Name: "",
 
 		}
-		err := tpl.ExecuteTemplate(w, "index.gohtml", d)
+		err := tpl.ExecuteTemplate(w, "index.html", d)
 		HandleError(err)
 	})
 
@@ -57,7 +57,7 @@ func main() {
 
 		}
 
-		err = tpl.ExecuteTemplate(w, "index.gohtml", d)
+		err = tpl.ExecuteTemplate(w, "index.html", d)
 		HandleError(err)
 	})
 

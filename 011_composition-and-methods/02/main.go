@@ -19,7 +19,7 @@ type doubleZero struct {
 }
 
 func init() {
-	tpl = template.Must(template.ParseGlob("index.gohtml"))
+	tpl = template.Must(template.ParseGlob("index.html"))
 }
 
 func main() {
@@ -32,7 +32,7 @@ func main() {
 		 LicenseToKill: false,
 	}
 
-	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", dz)
+	err := tpl.ExecuteTemplate(os.Stdout, "index.html", dz)
 	if err != nil {
 		log.Fatalln(err)
 	}

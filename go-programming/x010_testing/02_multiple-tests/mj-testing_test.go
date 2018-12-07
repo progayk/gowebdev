@@ -1,6 +1,9 @@
 package mjmath
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 type testpair struct {
 	values []float64
@@ -25,4 +28,10 @@ func TestAvarage(t *testing.T) {
 		}
 	}
 
+}
+
+func ExampleAvarage() {
+	fmt.Println(Avarage([]float64{1, 2}))
+	// Output:
+	// 1.5
 }
