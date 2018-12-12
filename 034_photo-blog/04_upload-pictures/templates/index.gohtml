@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+</head>
+<body>
+
+Hello from index
+
+{{- if .}}
+        <ul>
+       {{- range $v := . }}
+        <li>{{$v}}</li>
+       {{- end}}
+        </ul>
+{{- end}}
+
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="nf" placeholder="upload a file">
+    <input type="submit">
+</form>
+
+</body>
+</html>

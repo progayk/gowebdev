@@ -4,12 +4,13 @@
 1. connect workbench to rds mysql db
 1. https://www.youtube.com/watch?v=k68Y-XYapEI
 
-#Install MySQL on local machine
 
 **resources & credits**
 
+* https://github.com/golang/go/wiki/SQLInterface
 * https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
 
+#Install MySQL on local machine
 ##Introduction
 
 update your package index, install the mysql-server package, and then run the included security script.
