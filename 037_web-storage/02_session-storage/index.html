@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Local Storage</title>
+    <style>
+        button {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Hello!</h1>
+
+<p>The data in session storage expires as soon as the open browser tab is closed.</p>
+
+<ul>
+    <li>01</li>
+    <li>02</li>
+    <li>03</li>
+</ul>
+
+<button>Big button</button>
+
+<script>
+    sessionStorage.setItem("favoriteFlavor", "vanilla! it's in session storage")
+    let item = sessionStorage.getItem("favoriteFlavor")
+    console.log("this is the item with key favoriteFlavor value: ", item)
+
+    // sessionStorage.removeItem("favoriteFlavor")
+    console.log(sessionStorage.getItem("favoriteFlavor"))
+
+</script>
+</body>
+</html>

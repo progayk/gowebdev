@@ -228,7 +228,7 @@ DESCRIBE cats;
 
 ```mysql
 INSERT INTO cats ( name, owner, birth) VALUES
-  ( 'Sandy', 'Lennon', '2015-01-03' ),
+  ( 'Sandy', 'Lennon', 01_custom-encode ),
   ( 'Cookie', 'Casey', '2013-11-13' ),
   ( 'Charlie', 'River', '2016-05-21' );
 ```
